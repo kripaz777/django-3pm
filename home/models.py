@@ -24,3 +24,11 @@ class SiteInfo(models.Model):
     time = models.CharField(max_length=100)
     def __str__(self):
         return self.address1
+
+class Contact(models.Model):
+    name = models.CharField(max_length=300)
+    email = models.EmailField(max_length=200)
+    subject = models.TextField()
+    message = models.TextField()
+    def __str__(self):
+        return self.name
