@@ -28,78 +28,27 @@
 						</div>
 					</div>					
 					<div class="row">
+						{% for pr in prices %}
 						<div class="col-lg-3 col-md-6 single-price">
 							<div class="top-part">
-								<h1 class="package-no">01</h1>
-								<h4>Economy</h4>
-								<p class="mt-10">For the individuals</p>
+								<h1 class="package-no">{{pr.rank}}</h1>
+								<h4>{{pr.name}}</h4>
+								<p class="mt-10">{{pr.used_for}}</p>
 							</div>
 							<div class="package-list">
 								<ul>
-									<li>Secure Online Transfer</li>
-									<li>Unlimited Styles for interface</li>
-									<li>Reliable Customer Service</li>
+									<li>{{pr.row_1}}</li>
+									<li>{{pr.row_2}}</li>
+									<li>{{pr.row_3}}</li>
 								</ul>
 							</div>
 							<div class="bottom-part">
-								<h1>£199.00</h1>
+								<h1>Rs. {{pr.price}}</h1>
 								<a class="price-btn text-uppercase" href="#">Buy Now</a>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-6 single-price">
-							<div class="top-part">
-								<h1 class="package-no">02</h1>
-								<h4>Business</h4>
-								<p class="mt-10">For the individuals</p>
-							</div>
-							<div class="package-list">
-								<ul>
-									<li>Secure Online Transfer</li>
-									<li>Unlimited Styles for interface</li>
-									<li>Reliable Customer Service</li>
-								</ul>
-							</div>
-							<div class="bottom-part">
-								<h1>£299.00</h1>
-								<a class="price-btn text-uppercase" href="#">Buy Now</a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 single-price">
-							<div class="top-part">
-								<h1 class="package-no">03</h1>
-								<h4>Premium</h4>
-								<p class="mt-10">For the individuals</p>
-							</div>
-							<div class="package-list">
-								<ul>
-									<li>Secure Online Transfer</li>
-									<li>Unlimited Styles for interface</li>
-									<li>Reliable Customer Service</li>
-								</ul>
-							</div>
-							<div class="bottom-part">
-								<h1>£399.00</h1>
-								<a class="price-btn text-uppercase" href="#">Buy Now</a>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-6 single-price">
-							<div class="top-part">
-								<h1 class="package-no">04</h1>
-								<h4>Exclusive</h4>
-								<p class="mt-10">For the individuals</p>
-							</div>
-							<div class="package-list">
-								<ul>
-									<li>Secure Online Transfer</li>
-									<li>Unlimited Styles for interface</li>
-									<li>Reliable Customer Service</li>
-								</ul>
-							</div>
-							<div class="bottom-part">
-								<h1>£499.00</h1>
-								<a class="price-btn text-uppercase" href="#">Buy Now</a>
-							</div>
-						</div>																		
+						{% endfor %}
+
 					</div>
 				</div>	
 			</section>

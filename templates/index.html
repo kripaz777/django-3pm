@@ -2,6 +2,7 @@
 {% load static %}
 {% block content %}
 			<!-- start banner Area -->
+<!--			for loop start-->
 			<section class="banner-area">
 				<div class="container">
 					<div class="row fullscreen align-items-center justify-content-between">
@@ -40,7 +41,7 @@
 				</div>	
 			</section>
 			<!-- End home-about Area -->
-
+<!--			for loop close-->
 			<!-- Start services Area -->
 			<section class="services-area section-gap">
 				<div class="container">
@@ -242,30 +243,21 @@
 		            </div>
 		            <div class="row">
 		                <div class="active-testimonial">
+							{% for feedback in feedbacks %}
 		                    <div class="single-testimonial item d-flex flex-row">
 		                        <div class="thumb">
-		                            <img class="img-fluid" src="{{i.image.url}}" alt="">
+		                            <img class="img-fluid" src="{{feedback.image.url}}" style = "height:100px; width:100px;" alt="">
 		                        </div>
 		                        <div class="desc">
 		                            <p>
-		                                Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills, the bigger the payoff you.		     
+										{{feedback.description}}
 		                            </p>
-		                            <h4>Harriet Maxwell</h4>
-		                            <p>CEO at Google</p>
+		                            <h4>{{feedfack.name}}</h4>
+		                            <p>{{feedback.post}}</p>
 		                        </div>
 		                    </div>
-		                    <div class="single-testimonial item d-flex flex-row">
-		                        <div class="thumb">
-		                            <img class="img-fluid" src="img/elements/user2.png" alt="">
-		                        </div>
-		                        <div class="desc">
-		                            <p>
-		                                A purpose is the eternal condition for success. Every former smoker can tell you just how hard it is to stop smoking cigarettes. However.
-		                            </p>
-		                            <h4>Carolyn Craig</h4>
-		                            <p>CEO at Facebook</p>
-		                        </div>
-		                    </div>
+
+							{% endfor %}
 		                </div>
 		            </div>
 		        </div>
